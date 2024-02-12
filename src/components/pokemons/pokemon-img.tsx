@@ -37,7 +37,10 @@ export const PokemonImage = component$(
               imageLoaded.value = true;
             }, 0);
           }}
-          class={{ hidden: !imageLoaded.value, "brightness-0": reveal }}
+          class={[
+            { hidden: !imageLoaded.value, "brightness-0": reveal },
+            "transition-all",
+          ]}
         />
       </div>
     );
